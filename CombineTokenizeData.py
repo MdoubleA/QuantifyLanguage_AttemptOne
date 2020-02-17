@@ -1,16 +1,20 @@
 import os
 from pathlib import Path
 import nltk
-import string
+import shutil
 
 
 src_dir = input("\nEnter Directory Name: ").strip()
 header = "post\tlabel\tauthor\tsubreddit\tscore\tups\tdowns\tdate\tcreated_utc\tparent_comment\tpost_id\tparent_id\n"
 dst_dir = src_dir + "Clean"
 dst_file = dst_dir + "\\" + src_dir + ".csv"
+
+if os.path.exists(dst_dir):
+    shutil.rmtree(dst_dir)
+
 Path(dst_dir).mkdir(parents=True, exist_ok=True)  # Make destination file if it doesn't exist.
 
-clean_post = lambda x: ' '.join(nltk.word_tokenize(x.lower().translate(str.maketrans('', '', string.punctuation))))
+clean_post = lambda x: ' '.join(nltk.word_tokenize(x))
 
 with open(dst_file, "+w") as dst_handle:
     dst_handle.write(header)
