@@ -19,8 +19,11 @@ def get_csv(the_file):
 
 
 all_words = [word[0] for word in get_csv(all_files[both])]
+num_all = len(all_words)
 nonsarcastic_words = [word[0] for word in get_csv(all_files[nonsarcastic])]
+num_non = len(nonsarcastic_words)
 sarcastic_words = [word[0] for word in get_csv(all_files[sarcastic])]
+num_sarc = len(sarcastic_words)
 
 common_words = [x for x in nonsarcastic_words if x in sarcastic_words]
 not_common_words = [x for x in nonsarcastic_words if x not in sarcastic_words]
