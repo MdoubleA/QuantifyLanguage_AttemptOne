@@ -1,10 +1,4 @@
-import os
-from pathlib import Path
-import nltk
-import shutil
 import csv
-from nltk.corpus import stopwords
-from enum import Enum
 
 
 all_files = [
@@ -31,7 +25,7 @@ sarcastic_words = [word[0] for word in get_csv(all_files[sarcastic])]
 common_words = [x for x in nonsarcastic_words if x in sarcastic_words]
 not_common_words = [x for x in nonsarcastic_words if x not in sarcastic_words]
 
-print("Total number of words: " + str(len(all_words)))
+print("Number of words in set: " + str(len(all_words)))
 print("Number of words shared between subsets: " + str(len(common_words)))
 print("Number of words not shared between subsets: " + str(len(not_common_words)))
 print("\n")
