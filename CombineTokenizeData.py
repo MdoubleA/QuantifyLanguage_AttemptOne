@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import nltk
 import shutil
+import string
 
 
 src_dir = input("\nEnter Directory Name: ").strip()
@@ -14,7 +15,7 @@ if os.path.exists(dst_dir):
 
 Path(dst_dir).mkdir(parents=True, exist_ok=True)  # Make destination file if it doesn't exist.
 
-clean_post = lambda x: ' '.join(nltk.word_tokenize(x))
+clean_post = lambda x: ' '.join(nltk.word_tokenize(x.translate(str.maketrans('', '', string.punctuation))))
 
 with open(dst_file, "+w") as dst_handle:
     dst_handle.write(header)
