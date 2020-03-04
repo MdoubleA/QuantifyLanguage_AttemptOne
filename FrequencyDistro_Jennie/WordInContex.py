@@ -1,6 +1,5 @@
 import nltk
 from collections import Counter
-import functools
 
 
 REF = "Reference"
@@ -97,38 +96,3 @@ def get_context_frequency_distro():
 
 
 #get_context_frequency_distro()
-
-'''
-#  Get the Context of specific type of data from file.
-with open("Sarcastic.txt", "r") as file_handle:
-    key_word = file_handle.readline().strip()[1:]
-    line = file_handle.readline()
-    context = list()
-    while line[0] != "*":
-        context += line.strip().split(", ")
-        line = file_handle.readline()
-
-#result = sorted(context, key=context.count, reverse=True)
-#print(result)
-
-# Make frequency distribution.
-word_counts = Counter(context)
-print(word_counts)
-tot_num_word = len(context)
-print(len(context))
-freq_distro = {key: (value/tot_num_word) * 100 for key, value in word_counts.items()}
-freq_distro = [(k, v) for k, v in sorted(freq_distro.items(), key=lambda item: item[1])]
-freq_distro.reverse()
-print(freq_distro)
-'''
-
-''' Testing that the keys in word_count and freq_distro remain constant across processing 
-# functools.reduce(function, iterable[, initializer])
-x = [True for y in freq_distro if y[0] in word_counts.keys()]
-x = functools.reduce(lambda a, b: a and b, x)
-r = [y[0] for y in freq_distro]
-print(x)
-x = [True for y in word_counts.keys() if y in r]
-x = functools.reduce(lambda a, b: a and b, x)
-print(x)
-'''
