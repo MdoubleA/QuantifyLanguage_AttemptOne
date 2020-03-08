@@ -1,306 +1,33 @@
-Total Word Count:1000
-you 6.5
-know 5.6000000000000005
-have 4.2
-get 3.3000000000000003
-to 3.2
-the 3.0
-it 2.7
-want 2.5
-worry 2.3
-see 2.3
-think 1.7999999999999998
-like 1.7999999999999998
-any 1.7000000000000002
-need 1.7000000000000002
-a 1.5
-be 1.4000000000000001
-understand 1.3
-we 1.0
-why 1.0
-about 0.8
-just 0.8
-what 0.8
-believe 0.8
-they 0.8
-forget 0.7000000000000001
-with 0.7000000000000001
-i 0.7000000000000001
-your 0.7000000000000001
-people 0.7000000000000001
-pay 0.6
-agree 0.6
-even 0.6
-make 0.6
-how 0.6
-do 0.6
-me 0.6
-talk 0.5
-feel 0.5
-care 0.5
-their 0.5
-bother 0.5
-mean 0.4
-that 0.4
-guys 0.4
-matter 0.4
-so 0.4
-these 0.4
-he 0.4
-them 0.4
-anything 0.4
-those 0.4
-say 0.4
-this 0.4
-seem 0.3
-tell 0.3
-ask 0.3
-for 0.3
-enough 0.3
-silly 0.3
-allow 0.3
-give 0.3
-take 0.3
-an 0.3
-kill 0.3
-read 0.3
-on 0.3
-anyone 0.3
-us 0.3
-use 0.3
-sex 0.2
-my 0.2
-some 0.2
-in 0.2
-jobs 0.2
-na 0.2
-wan 0.2
-blame 0.2
-post 0.2
-yes 0.2
-kids 0.2
-if 0.2
-thank 0.2
-wear 0.2
-because 0.2
-find 0.2
-theyre 0.2
-thats 0.2
-put 0.2
-sound 0.2
-quite 0.2
-health 0.2
-really 0.2
-bugs 0.2
-especially 0.2
-of 0.2
-im 0.2
-move 0.2
-come 0.2
-its 0.2
-criticize 0.2
-let 0.2
-vote 0.2
-is 0.2
-autism 0.2
-shit 0.2
-realize 0.2
-question 0.2
-sense 0.1
-made 0.1
-create 0.1
-drugs 0.1
-legalize 0.1
-wish 0.1
-two 0.1
-fools 0.1
-mr 0.1
-boobs 0.1
-change 0.1
-send 0.1
-fix 0.1
-got 0.1
-enjoy 0.1
-actually 0.1
-usa 0.1
-itll 0.1
-ridiculous 0.1
-heels 0.1
-frame 0.1
-sarah 0.1
-stick 0.1
-redditors 0.1
-eugene 0.1
-fun 0.1
-support 0.1
-absurd 0.1
-yeah 0.1
-listen 0.1
-mad 0.1
-truck 0.1
-terrorism 0.1
-prevent 0.1
-reddit 0.1
-money 0.1
-cost 0.1
-censor 0.1
-yall 0.1
-choose 0.1
-lend 0.1
-tax 0.1
-obama 0.1
-boa 0.1
-panic 0.1
-shows 0.1
-respect 0.1
-set 0.1
-negate 0.1
-yourself 0.1
-embrace 0.1
-october 0.1
-bout 0.1
-isnt 0.1
-government 0.1
-seeing 0.1
-recall 0.1
-stone 0.1
-books 0.1
-burn 0.1
-reload 0.1
-retreat 0.1
-hydrogen 0.1
-form 0.1
-drug 0.1
-gay 0.1
-become 0.1
-up 0.1
-wake 0.1
-fox 0.1
-stiffing 0.1
-should 0.1
-attractive 0.1
-look 0.1
-small 0.1
-appreciate 0.1
-miss 0.1
-emotion 0.1
-show 0.1
-try 0.1
-who 0.1
-into 0.1
-fly 0.1
-special 0.1
-flash 0.1
-break 0.1
-wade 0.1
-rob 0.1
-generally 0.1
-advertise 0.1
-religious 0.1
-ptsd 0.1
-leave 0.1
-anonymously 0.1
-might 0.1
-boom 0.1
-rants 0.1
-spoilers 0.1
-cite 0.1
-u 0.1
-being 0.1
-coloreds 0.1
-nuke 0.1
-dont 0.1
-follow 0.1
-usually 0.1
-none 0.1
-comprehend 0.1
-call 0.1
-hasty 0.1
-fusion 0.1
-too 0.1
-continue 0.1
-steps 0.1
-pins 0.1
-count 0.1
-new 0.1
-return 0.1
-hit 0.1
-secretly 0.1
-english 0.1
-speak 0.1
-public 0.1
-back 0.1
-watch 0.1
-tv 0.1
-mather 0.1
-everyone 0.1
-waste 0.1
-havent 0.1
-taxes 0.1
-black 0.1
-noise 0.1
-slayers 0.1
-believing 0.1
-stop 0.1
-bad 0.1
-discredit 0.1
-ha 0.1
-from 0.1
-motivation 0.1
-unserstand 0.1
-there 0.1
-nothing 0.1
-hate 0.1
-commies 0.1
-asbestos 0.1
-such 0.1
-as 0.1
-issues 0.1
-rapists 0.1
-charge 0.1
-linux 0.1
-price 0.1
-racist 0.1
-christians 0.1
-all 0.1
-besides 0.1
-below 0.1
-him 0.1
-damn 0.1
-digital 0.1
-ur 0.1
-approve 0.1
-obsama 0.1
-trust 0.1
-work 0.1
-rem 0.1
-though 0.1
-oh 0.1
-exist 0.1
-go 0.1
-worthless 0.1
-gods 0.1
-idiots 0.1
-save 0.1
-savers 0.1
-queens 0.1
-apple 0.1
-evidence 0.1
-convert 0.1
-offend 0.1
-mistakes 0.1
-green 0.1
-time 0.1
-instead 0.1
-no 0.1
-stds 0.1
-something 0.1
-w 0.1
-torture 0.1
-truly 0.1
-note 0.1
-spontaneously 0.1
-fit 0.1
-here 0.1
-single 0.1
-accents 0.1
+*dont
+Total number of words in context: 40
+you:12.5 know:10.0 it:7.5 get:7.5 have:7.5 the:5.0 do:5.0 want:5.0 a:2.5 people:2.5 note:2.5 spontaneously:2.5 fit:2.5 here:2.5 bother:2.5 use:2.5 shit:2.5 single:2.5 why:2.5 accents:2.5 they:2.5 realize:2.5 me:2.5 question:2.5
+*thats
+Total number of words in context: 40
+a:15.0 i:7.5 impossible:7.5 it:5.0 why:5.0 not:5.0 the:5.0 all:2.5 essentially:2.5 we:2.5 money:2.5 what:2.5 to:2.5 going:2.5 right:2.5 good:2.5 ripoff:2.5 yeah:2.5 hes:2.5 weird:2.5 youre:2.5 running:2.5 probably:2.5 because:2.5 funny:2.5 cause:2.5 such:2.5
+*cant
+Total number of words in context: 40
+wait:10.0 be:7.5 to:7.5 lie:2.5 play:2.5 it:2.5 bothered:2.5 yeah:2.5 rape:2.5 prove:2.5 even:2.5 for:2.5 rest:2.5 the:2.5 do:2.5 help:2.5 isnt:2.5 laughing:2.5 stop:2.5 remember:2.5 ever:2.5 around:2.5 go:2.5 of:2.5 think:2.5 why:2.5 imagine:2.5 until:2.5 president:2.5 with:2.5 side:2.5 them:2.5 keep:2.5
+*im
+Total number of words in context: 40
+sure:22.5 that:5.0 they:5.0 glad:5.0 in:5.0 not:5.0 how:2.5 shocked:2.5 it:2.5 na:2.5 gon:2.5 going:2.5 just:2.5 uncontrollably:2.5 sobbing:2.5 itll:2.5 you:2.5 he:2.5 surprised:2.5 danger:2.5 well:2.5 the:2.5 pretty:2.5 cool:2.5 so:2.5 shit:2.5 saying:2.5
+*youre
+Total number of words in context: 40
+right:15.0 it:5.0 a:2.5 not:2.5 why:2.5 i:2.5 she:2.5 atheist:2.5 an:2.5 what:2.5 confusing:2.5 getting:2.5 callous:2.5 so:2.5 we:2.5 but:2.5 poor:2.5 na:2.5 gon:2.5 me:2.5 killing:2.5 to:2.5 great:2.5 only:2.5 saying:2.5 lying:2.5 obviously:2.5 reason:2.5 the:2.5 at:2.5 looking:2.5 israel:2.5 upset:2.5 just:2.5
+*didnt
+Total number of words in context: 40
+that:12.5 see:10.0 know:7.5 we:5.0 to:5.0 all:5.0 tell:5.0 this:5.0 want:2.5 hear:2.5 it:2.5 realize:2.5 galileo:2.5 imprison:2.5 any:2.5 bush:2.5 have:2.5 they:2.5 hit:2.5 get:2.5 about:2.5 care:2.5 dish:2.5 you:2.5 filtered:2.5 use:2.5
+*doesnt
+Total number of words in context: 40
+have:10.0 the:10.0 it:7.5 matter:7.5 a:2.5 any:2.5 how:2.5 know:2.5 use:2.5 every:2.5 condemn:2.5 sense:2.5 make:2.5 weve:2.5 see:2.5 even:2.5 nfsw:2.5 imply:2.5 real:2.5 their:2.5 respect:2.5 this:2.5 implement:2.5 deem:2.5 america:2.5 do:2.5 harm:2.5 mention:2.5 to:2.5 get:2.5
+*theyre
+Total number of words in context: 40
+the:7.5 than:5.0 better:5.0 to:5.0 just:5.0 so:5.0 that:2.5 saying:2.5 cats:2.5 big:2.5 and:2.5 magical:2.5 attracted:2.5 holding:2.5 selfless:2.5 workers:2.5 callcenter:2.5 people:2.5 not:2.5 only:2.5 trying:2.5 from:2.5 coming:2.5 perhaps:2.5 american:2.5 ones:2.5 wrong:2.5 a:2.5 it:2.5 winning:2.5 totally:2.5 bullshit:2.5 all:2.5
+*isnt
+Total number of words in context: 40
+a:12.5 that:7.5 what:5.0 even:2.5 radiohead:2.5 of:2.5 part:2.5 controversy:2.5 any:2.5 the:2.5 destroying:2.5 thanks:2.5 so:2.5 there:2.5 to:2.5 ok:2.5 me:2.5 telling:2.5 worthy:2.5 buzz:2.5 real:2.5 ooooh:2.5 president:2.5 well:2.5 torture:2.5 supposed:2.5 easier:2.5 it:2.5 charge:2.5 in:2.5 making:2.5 then:2.5 him:2.5
+*every
+Total number of words in context: 40
+day:5.0 wow:5.0 oh:2.5 rule:2.5 moment:2.5 living:2.5 our:2.5 half:2.5 everything:2.5 on:2.5 country:2.5 way:2.5 act:2.5 horrible:2.5 part:2.5 other:2.5 ever:2.5 camera:2.5 going:2.5 hospitals:2.5 is:2.5 woman:2.5 trying:2.5 weekend:2.5 with:2.5 word:2.5 to:2.5 reference:2.5 one:2.5 afternoon:2.5 of:2.5 portion:2.5 american:2.5 redblooded:2.5 scientist:2.5 credible:2.5 who:2.5 guy:2.5
+*hes
+Total number of words in context: 40
+right:12.5 a:7.5 the:5.0 character:2.5 some:2.5 there:2.5 going:2.5 now:2.5 just:2.5 racist:2.5 totally:2.5 best:2.5 wearing:2.5 probably:2.5 brown:2.5 not:2.5 on:2.5 big:2.5 as:2.5 to:2.5 trying:2.5 community:2.5 such:2.5 hero:2.5 american:2.5 an:2.5 no:2.5 his:2.5 keeping:2.5 kenya:2.5 from:2.5 so:2.5 joking:2.5
