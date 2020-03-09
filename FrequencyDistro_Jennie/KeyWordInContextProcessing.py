@@ -128,7 +128,11 @@ cate_stopwordless_corpus = {
 # {str: {str: [[str]]}}
 def sort_corpus_by_key_word(a_corpus):
     return {category: {a_word: [a_post for a_post in a_corpus[category] if a_word in a_post]
-                       for a_word in key_words[category]} for category, key_words_ in key_words.items()}
+                       for a_word in key_words[category]}
+                            for category, key_words_ in key_words.items()}
+
+
+corpora_by_keyword = sort_corpus_by_key_word(cate_stopwordless_corpus)
 
 
 # Orientation is your right or left, not the posts's.
@@ -152,23 +156,88 @@ def get_window(key_word, the_post, orientation, window_size):
     return to_return
 
 
-# Always and only pass "cate_to_stopwordless_corpus".
+# Returns the window sized context of each key word.
+# Pass to it the results of the sort_corpus_by_key_word
 # {str: {str: [[str]]}}
 def get_keyword_context(a_corpus, window_size, orientation):
-    return {category: {a_word: [a_post for a_post in a_corpus[category] if a_word in a_post]
-                       for a_word in key_words[category]} for category, key_word_mapping in key_words.items()}
+    return {category: {key_word: [get_window(key_word, a_post, orientation, window_size) for a_post in posts]
+                       for key_word, posts in key_word_mapping.items()}
+                            for category, key_word_mapping in a_corpus.items()}
 
+
+def get_contextual_freq_distro(keyword, posts):
+    return Counter([word for post in posts for word in post if keyword != word])
+
+
+# Returns the window sized context of each key word. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Pass to it the results of the sort_corpus_by_key_word
+# {str: {str: [[str]]}}
+def contextual_freq_distro_by_cate(a_corpus):
+    return {category: {key_word: get_contextual_freq_distro(key_word, posts)
+                       for key_word, posts in key_word_mapping.items()}
+                            for category, key_word_mapping in a_corpus.items()}
+
+
+window_size = 5
+orientation = 'right'  # Note: to get a center orientation, must maneuver.
+keyword_context_by_cate = get_keyword_context(corpora_by_keyword, window_size, orientation)
+keyword_freq_distro_by_cate = contextual_freq_distro_by_cate(keyword_context_by_cate)
+
+
+# Returns the window sized context of each key word.
+# Pass to it the results of the sort_corpus_by_key_word
+# {str: {str: [[str]]}} !!!!!!!!!!!!!!!!!!!!!!!!!!
+def tagged_context_by_cate(a_corpus):
+    context = {category: {key_word: list(set([word for post in get_tagged_corpus(posts) for word in post]))
+                       for key_word, posts in key_word_mapping.items()}
+                            for category, key_word_mapping in a_corpus.items()}
+
+    context = {category: {key_word: neighboor_words
+                          for key_word, neighboor_words in key_word_mapping.items() if neighboor_words}
+                                for category, key_word_mapping in context.items()}
+
+    return context
+
+
+def ship_tagged_context_to_file(a_corpus):
+    with open("TaggedContextByCategoryKeyword.txt", "w") as file_handle:
+        for category, keyword_mapping in a_corpus.items():
+            file_handle.write('category: ' + category + '\n')
+            for keyword, tagged_context in keyword_mapping.items():
+                file_handle.write('keyword: ' + keyword + '\n')
+                data = [":".join(word) for word in tagged_context]
+                data = " ".join(data) + '\n'
+                file_handle.write(data)
+
+
+tagged_context = tagged_context_by_cate(keyword_context_by_cate)
+# ship_tagged_context_to_file(tagged_context)
+a = tagged_context[SAR]['oh']
+print(a)
 
 
 '''
+def func():
+    N = 5  # The number of bars.
+    menMeans = (20, 35, 30, 35, 27)
+    womenMeans = (25, 32, 34, 20, 25)
+    menStd = (2, 3, 4, 1, 2)
+    womenStd = (3, 5, 2, 3, 3)
+    ind = np.arange(N)    # the x locations for the groups
+    width = 0.35       # the width of the bars: can also be len(x) sequence
 
-print(sarc_corpus[0])
-print(stopwordless_sarc[0])
-i need a girlfriend omg i am insulted and the code is wrongfun anyway idiots
-['need', 'girlfriend', 'omg', 'insulted', 'code', 'wrong', 'anyway', 'idiots']
+    p1 = plt.bar(ind, menMeans, width)
+    p2 = plt.bar(ind, womenMeans, width,
+             bottom=menMeans)
 
+    plt.ylabel('Scores')
+    plt.title('Scores by group and gender')
+    plt.xticks(ind, ('G1', 'G2', 'G3', 'G4', 'G5'))
+    plt.yticks(np.arange(0, 81, 10))
+    plt.legend((p1[0], p2[0]), ('Men', 'Women'))
+
+    plt.show()
 '''
-
 
 
 # Be sure to satisfy PEP 8.
