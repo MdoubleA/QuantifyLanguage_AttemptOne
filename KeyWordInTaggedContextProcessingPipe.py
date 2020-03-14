@@ -23,9 +23,8 @@ key_word_src_files = {
 
 
 # Source files for labeled sarcastic and nonsarcastic data and metadata.
-sarc_file_name = "C:\\Users\\Michael\\PycharmProjects\\QuantfyLanguage_AttemptOne\\SarcCommentsClean\\SarcComments.csv"
-nonsarc_file_name = "C:\\Users\\Michael\\PycharmProjects\\QuantfyLanguage_AttemptOne\\NonSarcCommentsClean\\" \
-                    "NonSarcComments.csv"
+sarc_file_name = "SarcComments.csv"
+nonsarc_file_name = "NonSarcComments.csv"
 
 
 # From file pull the corpus. Expects a CSV file with tokenized comments in first column followed by metadata.
