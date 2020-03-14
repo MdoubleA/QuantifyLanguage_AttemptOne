@@ -22,7 +22,7 @@ key_word_file_name = "UniqueWordsAndSharedWords.txt"
 
 # From file pull the corpus. Expects a CSV file with tokenized comments in first column followed by metadata.
 # [str] where each string is a post made of only lower case letters.
-def get_corpus(file_name):
+def get_corpus(file_name):  #@#
     with open(file_name, "r") as file_handle:
         #  For each line in the file remove white space, get first column, convert it to list and add it to "the_text".
         #  The csv header file will be in the 0th position, remove it.
@@ -62,7 +62,7 @@ cate_to_corpus = {
 
 
 # Return the corpus without stop words
-def remove_stop_words(the_corpus):
+def remove_stop_words(the_corpus):  #@#
     # [[str]]
     return [[a_word for a_word in a_post.split(" ") if a_word not in stop_words] for a_post in the_corpus]
 
@@ -116,7 +116,7 @@ tagged_key_words = filter_for_tagged_key_words(cate_to_tagged_key_words, key_wor
 # send_tag_words_to_file(tagged_key_words)
 
 
-cate_stopwordless_corpus = {
+cate_stopwordless_corpus = {  #@#
     SAR: stopwordless_sarc,
     NON: stopwordless_nonsarc,
     REF: stopwordless_reference,
@@ -126,13 +126,13 @@ cate_stopwordless_corpus = {
 
 # Always and only pass "cate_to_stopwordless_corpus".
 # {str: {str: [[str]]}}
-def sort_corpus_by_key_word(a_corpus):
+def sort_corpus_by_key_word(a_corpus):  #@#
     return {category: {a_word: [a_post for a_post in a_corpus[category] if a_word in a_post]
                        for a_word in key_words[category]}
                             for category, key_words_ in key_words.items()}
 
 
-corpora_by_keyword = sort_corpus_by_key_word(cate_stopwordless_corpus)
+corpora_by_keyword = sort_corpus_by_key_word(cate_stopwordless_corpus)  #@#
 
 
 # Orientation is your right or left, not the posts's.
@@ -159,7 +159,7 @@ def get_window(key_word, the_post, orientation, window_size):
 # Returns the window sized context of each key word.
 # Pass to it the results of the sort_corpus_by_key_word
 # {str: {str: [[str]]}}
-def get_keyword_context(a_corpus, window_size, orientation):
+def get_keyword_context(a_corpus, window_size, orientation):  #@#
     return {category: {key_word: [get_window(key_word, a_post, orientation, window_size) for a_post in posts]
                        for key_word, posts in key_word_mapping.items()}
                             for category, key_word_mapping in a_corpus.items()}
@@ -180,21 +180,23 @@ def contextual_freq_distro_by_cate(a_corpus):
 
 window_size = 5
 orientation = 'right'  # Note: to get a center orientation, must maneuver.
-keyword_context_by_cate = get_keyword_context(corpora_by_keyword, window_size, orientation)
-keyword_freq_distro_by_cate = contextual_freq_distro_by_cate(keyword_context_by_cate)
+keyword_context_by_cate = get_keyword_context(corpora_by_keyword, window_size, orientation)  #@#
+#keyword_freq_distro_by_cate = contextual_freq_distro_by_cate(keyword_context_by_cate)
 
 
 # Returns the window sized context of each key word.
 # Pass to it the results of the sort_corpus_by_key_word
 # {str: {str: [[str]]}} !!!!!!!!!!!!!!!!!!!!!!!!!!
-def tagged_context_by_cate(a_corpus):
-    context = {category: {key_word: list(set([word for post in get_tagged_corpus(posts) for word in post]))
+def tagged_context_by_cate(a_corpus):  #@#
+    context = {category: {key_word: [word for post in get_tagged_corpus(posts) for word in post]
                        for key_word, posts in key_word_mapping.items()}
                             for category, key_word_mapping in a_corpus.items()}
 
+    '''
     context = {category: {key_word: neighboor_words
                           for key_word, neighboor_words in key_word_mapping.items() if neighboor_words}
                                 for category, key_word_mapping in context.items()}
+    '''
 
     return context
 
@@ -210,10 +212,29 @@ def ship_tagged_context_to_file(a_corpus):
                 file_handle.write(data)
 
 
-tagged_context = tagged_context_by_cate(keyword_context_by_cate)
-# ship_tagged_context_to_file(tagged_context)
-a = tagged_context[SAR]['oh']
-print(a)
+tagged_context = tagged_context_by_cate(keyword_context_by_cate)  #@#
+#ship_tagged_context_to_file(tagged_context)
+#a = tagged_context[SAR]['oh']
+#print(a)
+
+
+def contextual_data_to_csv(the_corpus):  #@#
+    with open("ContextData.csv", "w") as file_handle:
+        file_handle.write("category,word,pos,freqincategory\n")
+        for category, keyword_mappings in the_corpus.items():
+            acc = dict()
+            for keyword, context in keyword_mappings.items():
+                for word in context:
+                    if word in acc:
+                        acc[word] += 1
+                    else:
+                        acc[word] = 1
+            for word, count in acc.items():
+                file_handle.write(category + "," + word[0] + "," + word[1] + "," + str(count) + "\n")
+
+
+#contextual_data_to_csv(tagged_context)  #@#
+
 
 
 '''
